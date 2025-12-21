@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "reshex",
+  "version": "${version}",
+  "name": "KVHA (Kneecore's Very Hex Addon)",
+  "description": "KVHA (Kneecore's Very Hex Addon), a suspiciously Hex Addon shaped addon for Hex Casting.",
+  "authors": [
+    "emir4169"
+  ],
+  "contact": {
+    "homepage": "https://emir4169.github.io/reshex",
+    "sources": "https://github.com/emir4169/reshex"
+  },
+  "license": "MIT",
+  "icon": "assets/reshex/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [{
+      "adapter": "kotlin",
+      "value": "io.github.emir4169.reshex.fabric.FabricReshex"
+    }],
+    "client": [{
+      "adapter": "kotlin",
+      "value": "io.github.emir4169.reshex.fabric.FabricReshexClient"
+    }],
+    "server": [{
+      "adapter": "kotlin",
+      "value": "io.github.emir4169.reshex.fabric.FabricReshexServer"
+    }],
+    "fabric-datagen": [{
+      "adapter": "kotlin",
+      "value": "io.github.emir4169.reshex.fabric.datagen.FabricReshexDatagen"
+    }],
+    "modmenu": [{
+      "adapter": "kotlin",
+      "value": "io.github.emir4169.reshex.fabric.FabricReshexModMenu"
+    }]
+  },
+  "mixins": [
+    "reshex-common.mixins.json",
+    "reshex-fabric.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "${versions.minecraft}",
+    "fabricloader": ">=${versions.fabric_loader}",
+    "fabric-api": ">=${versions.fabric_api}",
+    "fabric-language-kotlin": ">=${versions.kotlin_fabric}",
+    "architectury": ">=${versions.architectury}",
+    "hexcasting": ">=${versions.hexcasting_dependency}",
+    "cloth-config": ">=${versions.clothConfig}"
+  },
+  "suggests": {
+    "modmenu": ">=${versions.modMenu}"
+  }
+}
