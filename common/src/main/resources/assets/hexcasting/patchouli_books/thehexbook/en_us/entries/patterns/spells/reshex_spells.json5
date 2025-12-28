@@ -41,7 +41,7 @@
       op_id: "reshex:gemini_gambit_ii",
       anchor: "reshex:gemini_gambit_ii",
       input: "any, number",
-      output: "many",
+      output: "list",
       text: "reshex.book.patterns.spells.reshex_spells.gemini_gambit_ii",
     }
   ],
